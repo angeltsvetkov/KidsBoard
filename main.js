@@ -44,9 +44,11 @@ function init() {
     let home = localStorage.getItem("home");
     let away = localStorage.getItem("home");
     if(!home){
+        localStorage.setItem("home",0);
         home = 0;
     }
     if(!away){
+        localStorage.setItem("away",0);
         away = 0;
     }
     document.getElementById('team1').innerHTML = home;
