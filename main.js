@@ -41,8 +41,16 @@ const scoreBoard = {
 };
 
 function init() {
-    document.getElementById('team1').innerHTML = localStorage.getItem("home");
-    document.getElementById('team2').innerHTML = localStorage.getItem("away");
+    let home = localStorage.getItem("home");
+    let away = localStorage.getItem("home");
+    if(!home){
+        home = 0;
+    }
+    if(!away){
+        away = 0;
+    }
+    document.getElementById('team1').innerHTML = home;
+    document.getElementById('team2').innerHTML = away;
     const container = document.querySelector('.scorecontainer');
     container.addEventListener('click', function (e) {
         // run function with params that match the buttons id
