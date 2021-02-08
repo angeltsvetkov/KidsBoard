@@ -1,7 +1,7 @@
 const scoreBoard = {
     _round: 0,
-    _home: parseInt(localStorage.getItem("home")),
-    _away: parseInt(localStorage.getItem("away")),
+    _home: parseInt(localStorage.getItem("home")) || 0,
+    _away: parseInt(localStorage.getItem("away")) || 0,
     range: [0, 99],
     set home(val) {
         this._home = val;
@@ -25,7 +25,8 @@ const scoreBoard = {
             this[value] = this[getter] - step;
         }
 
-        localStorage.setItem(value, parseInt(this[getter]) );
+        let storeNumber = this[getter];
+        localStorage.setItem(value, parseInt(storeNumber) );
         
     },
     homeplus: ['home', '+', 1],
