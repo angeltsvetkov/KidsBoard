@@ -11,10 +11,6 @@ const scoreBoard = {
         this._away = val;
         document.querySelector('#team2').textContent = this._away;
     },
-    set round(val) {
-        this._round = val;
-        document.querySelector('#roundnum').textContent = this._round;
-    },
     checkRangeAndUpdate(value, operator, step) {
         // destructure max and min
         const [min, max] = this.range;
@@ -42,13 +38,13 @@ const scoreBoard = {
 
 function init() {
     let home = localStorage.getItem("home");
-    let away = localStorage.getItem("home");
+    let away = localStorage.getItem("away");
     if(!home){
-        localStorage.setItem("home",0);
+        localStorage.setItem("home","0");
         home = 0;
     }
     if(!away){
-        localStorage.setItem("away",0);
+        localStorage.setItem("away","0");
         away = 0;
     }
     document.getElementById('team1').innerHTML = home;
