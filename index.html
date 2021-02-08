@@ -7,25 +7,32 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="./main.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 
 <body>
-    <div style="padding-top: 100px; color: #337ab7">
-        <marquee behavior="scroll" direction="left"> <h1>ЗАПОВЯДАЙ&emsp;&emsp;БЛАГОДАРЯ &emsp;&emsp; МОЛЯ&emsp;&emsp;ОБИЧАМ ТЕ</h1></marquee>
-
+    <div style="padding-top: 80px;">
+        <h1 class="ml4" style="color: #d9edf7">
+            <span class="letters letters-1">ЗАПОВЯДАЙ</span>
+            <span class="letters letters-2">БЛАГОДАРЯ</span>
+            <span class="letters letters-3">МОЛЯ</span>
+            <span class="letters letters-4">ОБИЧАМ ТЕ</span>
+          </h1>
+          
         <div class="scorecontainer">
             <div class="btncontainer">
                 <img src="img/keti.png" style="width: 250px; height: auto; border-radius: 20px" />
                 <div class="btn" id="team1">0</div>
-                <button class="scorebtn" id="homeplus">+</button>
-                <button class="scorebtn" id="homeminus">-</button>
+                <button class="scorebtn" id="homeplus" style="background-color: white;">😇</button>
+                <button class="scorebtn" id="homeminus">😠</button>
             </div>
 
             <div class="btncontainer">
                 <img src="img/samuil.png" style="width: 250px; height: auto; border-radius: 20px" />
                 <div class="btn" id="team2">0</div>
-                <button class="scorebtn" id="awayplus">+</button>
-                <button class="scorebtn" id="awayminus">-</button>
+                <button class="scorebtn" id="awayplus" style="background-color: white;">😇</button>
+                <button class="scorebtn" id="awayminus">😠</button>
             </div>
         </div>
     </div>
